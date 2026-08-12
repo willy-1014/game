@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "star-sprout-lab-starter"
+version = "0.1.0"
+description = "Intentionally incomplete pure-model shooter starter for Labs 02-06"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = []
+
+[project.optional-dependencies]
+display = ["pygame-ce==2.5.7"]
+test = ["pytest==9.1.1"]
+
+[project.scripts]
+star-sprout-lab = "star_sprout_lab.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

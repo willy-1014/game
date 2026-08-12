@@ -1,0 +1,2 @@
+[console_scripts]
+star-sprout-lab = star_sprout_lab.__main__:main

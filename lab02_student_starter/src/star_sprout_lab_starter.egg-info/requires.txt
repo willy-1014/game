@@ -1,0 +1,6 @@
+
+[display]
+pygame-ce==2.5.7
+
+[test]
+pytest==9.1.1

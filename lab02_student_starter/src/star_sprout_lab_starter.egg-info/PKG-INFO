@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: star-sprout-lab-starter
+Version: 0.1.0
+Summary: Intentionally incomplete pure-model shooter starter for Labs 02-06
+Requires-Python: <3.14,>=3.11
+Description-Content-Type: text/markdown
+Provides-Extra: display
+Requires-Dist: pygame-ce==2.5.7; extra == "display"
+Provides-Extra: test
+Requires-Dist: pytest==9.1.1; extra == "test"
+
+# Lab 02 Student Workspace
+
+This folder is intentionally incomplete. Read the included `LAB_README.md`, `rubric.md`, `submission_checklist.md`, and `public_test_contract.md` before editing the `TODO(Lab 02)` area in `src/star_sprout_lab/model.py`.
+
+## Supported setup
+
+Verify that the selected interpreter is Python 3.11, 3.12, or 3.13 before creating an environment:
+
+```bash
+python --version
+python -c "import sys; raise SystemExit(0 if (3, 11) <= sys.version_info[:2] < (3, 14) else 1)"
+python -m venv .venv
+```
+
+Activate the environment:
+
+```text
+macOS/Linux: source .venv/bin/activate
+PowerShell:   .venv\Scripts\Activate.ps1
+Conda:        conda create -n ncku-game-2026 python=3.11 -y
+              conda activate ncku-game-2026
+```
+
+Then install and observe the baseline:
+
+```bash
+python -m pip install -e '.[test]'
+python -m unittest discover -s tests_public -v
+python -m star_sprout_lab --headless --seed 42 --frames 120 --assert-deterministic
+```
+
+If the package installer is unavailable, run the standard-library-only core directly with `PYTHONPATH=src` (macOS/Linux) or `$env:PYTHONPATH = "src"` (PowerShell), then use the same `python -m unittest` and headless commands.
+
+The infrastructure tests are green; Lab 02 tests are expected to fail until you implement the published movement contract.
